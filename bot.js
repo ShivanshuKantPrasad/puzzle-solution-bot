@@ -24,7 +24,7 @@ client.on('message', msg => {
 
 	    msg.reply('Thanks for your solution.');  
     
-		const channel = msg.guild.channels.find(ch => ch.name === "private-solution-channel");
+		const channel = msg.guild.channels.find(ch => ch.name === "puzzle-masters");
 		channel.send(`Solution by ${solution.author}\n${solution.answer}\n${solution.attachments}`)
 		.then(x => {
 			return msg.delete()
